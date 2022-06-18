@@ -1,0 +1,203 @@
+<!-- Page food banks can use to post upcoming events they have -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kitchen Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:ital,wght@0,500;0,600;0,700;1,200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- This is the start of the HEADER -->
+    <section class="header">
+        <nav>
+            <a href="index.htm"><img src="{{url_for('static', filename='logo2.svg')}}" radius="5px"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="home">HOME</a></li>
+                        <li><a href="about">ABOUT</a></li>
+                        <li><a href="map">MAP</a></li>
+                        <li><a href="event">POST EVENTS</a></li>
+                        <li><a href="events_list">EVENTS LIST</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+
+    <div class="text-box">
+        <h1>The Kitchen Project</h1>
+        <p>Post Upcoming Food Drive Events</p>
+        <!-- <a href=""> Visit us to see more</a> -->
+    </div>
+    </section>
+
+
+ 
+
+<section class="course">
+      <h1>Post an Upcoming Food Drive Event</h1>
+      <form method="POST">
+        <div class="form-group">
+          <label for="event_name">Name of hosting food bank</label>
+          <input
+            type="event_name"
+            class="form-control"
+            id="event_name"
+            name="event_name"
+            placeholder="Enter name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="event_date">Start Date and Time</label>
+          <input
+            type="datetime-local"
+            class="form-control"
+            id="event_start"
+            name="event_start"
+            placeholder="Enter start date and time"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="event_date">End Date and Time</label>
+          <input
+            type="datetime-local"
+            class="form-control"
+            id="event_end"
+            name="event_end"
+            placeholder="Enter end date and time"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="event_location">City</label>
+          <input
+            type="event_location"
+            class="form-control"
+            id="event_location"
+            name="event_location"
+            placeholder="Enter event city"
+          />
+        </div>
+
+        <div class="form-group">
+            <label for="event_city">event location</label>
+            <input
+              type="event_city"
+              class="form-control"
+              id="event_city"
+              name="event_city"
+              placeholder="Enter event_location"
+            />
+          </div>
+        <div class="form-group">
+          <label for="Phone_number">Phone number</label>
+          <input 
+           type="Phone_number"
+           class="form-control"
+           id="Phone_number"
+           name="Phone_number"
+           placeholder="Your phone number"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="event_foodtypes">Food Types</label>
+          <input
+            type="datalist"
+            list="foodlist"
+            class="form-control"
+            id="event_foodtypes"
+            name="event_foodtypes"
+          />
+          <datalist id="foodlist">
+            <option value="No dietary restrictions"></option>
+            <option value="Vegetarian"></option>
+            <option value="Vegan"></option>
+            <option value="Pescatarian"></option>
+            <option value="Halal"></option>
+          </datalist>
+        </div>
+
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Javascript for toggling menu -->
+<!-- this is where we'll make the functions to show or hide the icons -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- section for about us page? possibly scrap -->
+    <a href="templates/about.htm"> About Us </a>
+
+    <!-- 
+        <div style=
+            "background-color:#000000;
+            text-align:center;
+            padding:10px;
+            margin-top:7px;">
+        Waffle Hacks
+        </div>
+    -->
+</body>
+</html>
+
+
+
+</section>body>

@@ -1,0 +1,170 @@
+<!-- Page food banks can use to post upcoming events they have -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title> Waffle Hacks</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"/>
+
+    
+
+</head>
+
+
+
+<body>
+    <!-- This is the start of the HEADER -->
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="{{url_for('static', filename='logo.svg')}}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">MAP</a></li>
+                        <li><a href="/event">POST EVENTS</a></li>
+                        <li><a href="">EVENTS LIST</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+
+    <div class="text-box">
+        <h1>The Kitchen Project</h1>
+        <p>Dedicated to Connecting Students and Restaurants with Food Banks</p>
+        <a href=""> Visit us to see more</a>
+    </div>
+    </section>
+
+
+ 
+
+<section class="course">
+    <div class="header">
+      <h1>Create a Student Profile</h1>
+      <form method="POST">
+        <div class="form-group">
+          <label for="student_name">Full Name</label>
+          <input
+            type="student_name"
+            class="form-control"
+            id="student_name"
+            name="student_name"
+            placeholder="Enter name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="student_address">Address</label>
+          <input
+            type="student_address"
+            class="form-control"
+            id="student_address"
+            name="student_address"
+            placeholder="Enter address"
+          />
+        </div>
+        <div class="form-group">
+          <label for="student_city"><A</label>
+          <input 
+            type="student_city"
+            class="form-control"
+            id="student_city"
+            name="student_city"
+            placeholder="Enter your city"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="student_num">Phone Numer</label>
+          <input
+            type="student_num"
+            class="form-control"
+            id="student_num"
+            name="student_num"
+            placeholder="Enter phone number"
+          />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Javascript for toggling menu -->
+<!-- this is where we'll make the functions to show or hide the icons -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- section for about us page? possibly scrap -->
+    <a href="templates/about.htm"> About Us </a>
+
+    <!-- 
+        <div style=
+            "background-color:#000000;
+            text-align:center;
+            padding:10px;
+            margin-top:7px;">
+        Waffle Hacks
+        </div>
+    -->
+</body>
+</html>
+
+
+
+</section>body>

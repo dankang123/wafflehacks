@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kitchen Project</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:ital,wght@0,500;0,600;0,700;1,200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/65bc138d3d.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <!-- This is the start of the HEADER -->
+    <section class="header">
+        <nav>
+            <a href="index.htm"><img src="{{url_for('static', filename='logo2.svg')}}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="/home">HOME</a></li>
+                        <li><a href="map">MAP</a></li>
+                        <li><a href="event">POST EVENTS</a></li>
+                        <li><a href="events_list">EVENTS LIST</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class="flexbox">
+        <div class="text-box">
+            <h1>The Kitchen Project</h1>
+            <p>Dedicated to Connecting Students and Restaurants with Food Banks</p>
+        </div>
+        <div class="img-box">
+            <img src="https://www.vitacost.com/blog/wp-content/uploads/2017/08/College-Life-How-to-Eat-Healthy-with-Food-Allergies-at-School-e1502288574935.jpg" style="width:20%;height:auto">
+            <img src="https://www.vitacost.com/blog/wp-content/uploads/2017/08/College-Life-How-to-Eat-Healthy-with-Food-Allergies-at-School-e1502288574935.jpg" style="width:20%;height:auto">
+        </div>
+    </div>
+    </section>
+
+    <section class="course">
+        <h1> About Us</h1>
+        <p>This is where I can add any description I want to 
+            for example: the reason for this website</p>
+        <div class="row">
+            <div class="course-col">
+                <h3> Degree</h3>
+                <p> insert whatever</p>
+            </div>
+            <div class="course-col">
+                <h3> Post Grad</h3>
+                <p>Insert whatever</p>
+            </div>
+            <div class="course-col">
+                <h3> adult</h3>
+                <p>almost dead</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="campus">
+        <h1>Our Campus</h1>
+        <p>explaining right below the heading whatever</p>
+        <div class="row">
+            <div class="campus-col">
+                <!-- add image here MAKE SURE TO CHANGE -->
+                <img src="{{url_for('static', filename='vegetable.jpg')}}">
+                <div class="layer">
+                    <h3> LONDON </h3>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+
+    <section class="facilities">
+        <h1> Our Facility </h1>
+        <p> description of everything else here </p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="{{url_for('static', filename='loop.jpg')}}">
+                <h3> world class library i guess lol </h3>
+                <p> any auruiabksjebgjk seg bsjk</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h1>Our facilities</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="{{url_for('static', filename='vegetable.jpg')}}">
+                <div>
+                    <p> add whatever the hell you want </p>
+                    <h3> name or whatever you want to pop up here</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h1> Connect with Us! </h1>
+        <!-- <a href="contacts" class="hero-btn">CONTACT US</a> -->
+        <!-- this saves the name and address to mysql-->
+    
+        <form action="/" method="post">
+            <input type="text" name="Fname" placeholder="Full name"/><br>
+            <input type="text" name="Adress" placeholder="Adress"/><br>
+            <input type="submit">
+        </form>
+    </section>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p> The four of us are high-school/college students from all across the world. <br>
+        Inspired by WaffleHacks, we came up with a solution to fight the under-represented <br>
+        college students who go through food insecurities so that they can focus on their <br>
+        mental/physical health as well as their academics!
+        </p>
+        <div class="icons">
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa fa-facebook-square"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with Teamwork and WaffleFuel <i class="fa-solid fa-stroopwafel"></i></p>
+    </section>
+
+    <!-- Javascript for toggling menu -->
+    <!-- this is where we'll make the functions to show or hide the icons -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    <!-- section for about us page? possibly scrap -->
+    <!-- <a href="templates/about.htm"> About Us </a> -->
+    <!-- 
+        <div style=
+            "background-color:#000000;
+            text-align:center;
+            padding:10px;
+            margin-top:7px;">
+        Waffle Hacks
+        </div>
+    -->
+</body>
+</html>
