@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
 sql_student = "INSERT INTO student (name, address, phonenumber, city) VALUES (%s, %s, %s, %s)"
 sql_resturant = "INSERT INTO resturants (name, address) VALUES (%s, %s)"
 sql_foodbanks = "INSERT INTO foodbanks (name, address, city, email) VALUES (%s, %s, %s, %s)"
-sql_events = "INSERT INTO events (start, end, foodtype, name, city) VALUES (%s, %s, %s, %s, %s)"
+sql_events = "INSERT INTO events (start, end, foodtype, name, city, location) VALUES (%s, %s, %s, %s, %s, %s)"
 #need to make events database I think
 
 
@@ -28,7 +28,22 @@ foodbank_names = [
 
 ]
 
-mycusor = mydb.cursor()
+event_names = ("June 5th 2022, 14:00", "June 5th 2022, 16:00", "Vegan", "New York" "Harrison Food Drive", "702 Modale Drive")
+
+
+
+    
+
+#mycusor.execute(sql_events, event_names)
+#mydb.commit()
+
+
+#sql = "SELECT phonenumber FROM student WHERE city = 'centurion'"
+#mycusor.execute(sql)
+
+#myresult = mycusor.fetchall()
+#for x in myresult:
+    #print(x)
 
 
 # def add_events(name,start_date, end_date, location, city, food_types):
@@ -46,3 +61,4 @@ mycusor = mydb.cursor()
 # CREATE TABLE MyUsers ( firstname VARCHAR(30) NOT NULL,  lastname VARCHAR(30) NOT NULL);
 # you can ignore this for now. I just created a Fname Lname in "index.html"
 
+# DELETE FROM sql_events [WHERE Clause]

@@ -1,15 +1,71 @@
-<!-- List of food drive events, ie when they are donating -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Kitchen Project</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:ital,wght@0,500;0,600;0,700;1,200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/65bc138d3d.js" crossorigin="anonymous"></script>
 </head>
+
+
 <body>
-    {%for i in myresult%}
-       <p>{{ i }}</p>
-    {%endfor%}
+    <!-- This is the start of the HEADER -->
+    <section class="header">
+        <nav>
+            <a href=""><img src="{{url_for('static', filename='logo2.svg')}}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="/home">HOME</a></li>
+                        <li><a href="map">MAP</a></li>
+                        <li><a href="event">POST EVENTS</a></li>
+                        <li><a href="events_list">EVENTS LIST</a></li>
+                        <li><a href="student">STUDENT REGISTRATION</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class="flexbox">
+        <div class="text-box">
+            <h1>The Kitchen Project</h1>
+            <p>Dedicated to Connecting Students and Restaurants with Food Banks</p>
+        </div>
+        <div class="img-box">
+            <img src="https://www.vitacost.com/blog/wp-content/uploads/2017/08/College-Life-How-to-Eat-Healthy-with-Food-Allergies-at-School-e1502288574935.jpg" style="width:300px;height:auto">
+        </div>
+    </div>
+    </section>
+    <table id="data" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Dietary Restrictions</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in myresult %}
+            <tr>
+              <td>{{ i[3] }}</td>
+              <td>{{ i[5] }}</td>
+              <td>{{ i[4] }}</td>
+              <td>{{ i[2] }}</td>
+              <td>{{ i[0] }}</td>
+              <td>{{ i[1] }}</td>
+            
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
 </body>
 </html>

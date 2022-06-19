@@ -15,29 +15,31 @@
 <body>
     <!-- This is the start of the HEADER -->
     <section class="header">
-        <nav>
-            <a href="index.htm"><img src="{{url_for('static', filename='logo2.svg')}}" radius="5px"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li><a href="home">HOME</a></li>
-                        <li><a href="about">ABOUT</a></li>
-                        <li><a href="map">MAP</a></li>
-                        <li><a href="event">POST EVENTS</a></li>
-                        <li><a href="events_list">EVENTS LIST</a></li>
-                        <li><a href="">CONTACT</a></li>
-                    </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-
-
-    <div class="text-box">
-        <h1>The Kitchen Project</h1>
-        <p>Post Upcoming Food Drive Events</p>
-        <!-- <a href=""> Visit us to see more</a> -->
-    </div>
-    </section>
+      <nav>
+          <a href="index.htm"><img src="{{url_for('static', filename='logo2.svg')}}"></a>
+          <div class="nav-links" id="navLinks">
+              <i class="fa fa-times" onclick="hideMenu()"></i>
+                  <ul>
+                      <li><a href="/home">HOME</a></li>
+                      <li><a href="map">MAP</a></li>
+                      <li><a href="event">POST EVENTS</a></li>
+                      <li><a href="events_list">EVENTS LIST</a></li>
+                      <li><a href="student">STUDENT REGISTRATION</a></li>
+                  </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+  <div class="flexbox">
+      <div class="text-box">
+          <h1>The Kitchen Project</h1>
+          <p>Dedicated to Connecting Students and Restaurants with Food Banks</p>
+      </div>
+      <div class="img-box">
+          <img src="https://www.vitacost.com/blog/wp-content/uploads/2017/08/College-Life-How-to-Eat-Healthy-with-Food-Allergies-at-School-e1502288574935.jpg" style="width:300px;height:auto">
+          <img src="https://www.vitacost.com/blog/wp-content/uploads/2017/08/College-Life-How-to-Eat-Healthy-with-Food-Allergies-at-School-e1502288574935.jpg" style="width:300px;height:auto">
+      </div>
+  </div>
+  </section>
 
 
  
@@ -46,7 +48,7 @@
       <h1>Post an Upcoming Food Drive Event</h1>
       <form method="POST">
         <div class="form-group">
-          <label for="event_name">Name of hosting food bank</label>
+          <label for="event_name">Name of Hosting Food Bank</label>
           <input
             type="event_name"
             class="form-control"
@@ -78,28 +80,28 @@
         </div>
 
         <div class="form-group">
-          <label for="event_location">City</label>
+          <label for="event_location">Location</label>
           <input
             type="event_location"
             class="form-control"
             id="event_location"
             name="event_location"
-            placeholder="Enter event city"
+            placeholder="Enter event location"
           />
         </div>
 
         <div class="form-group">
-            <label for="event_city">event location</label>
+            <label for="event_city">Event City</label>
             <input
               type="event_city"
               class="form-control"
               id="event_city"
               name="event_city"
-              placeholder="Enter event_location"
+              placeholder="Enter event City"
             />
           </div>
         <div class="form-group">
-          <label for="Phone_number">Phone number</label>
+          <label for="Phone_number">Phone Number</label>
           <input 
            type="Phone_number"
            class="form-control"
@@ -183,21 +185,7 @@
 
 
 
-    <!-- section for about us page? possibly scrap -->
-    <a href="templates/about.htm"> About Us </a>
 
-    <!-- 
-        <div style=
-            "background-color:#000000;
-            text-align:center;
-            padding:10px;
-            margin-top:7px;">
-        Waffle Hacks
-        </div>
-    -->
-</body>
 </html>
 
 
-
-</section>body>

@@ -18,7 +18,7 @@
     <!-- This is the start of the HEADER -->
     <section class="header">
         <nav>
-            <a href="index.htm"><img src="{{url_for('static', filename='logo2.svg')}}"></a>
+            <a href=""><img src="{{url_for('static', filename='logo2.svg')}}"></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
@@ -26,6 +26,7 @@
                         <li><a href="map">MAP</a></li>
                         <li><a href="event">POST EVENTS</a></li>
                         <li><a href="events_list">EVENTS LIST</a></li>
+                        <li><a href="student">STUDENT REGISTRATION</a></li>
                     </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -36,81 +37,138 @@
             <p>Dedicated to Connecting Students and Restaurants with Food Banks</p>
         </div>
         <div class="img-box">
-            <img src="https://www.vitacost.com/blog/wp-content/uploads/2017/08/College-Life-How-to-Eat-Healthy-with-Food-Allergies-at-School-e1502288574935.jpg" style="width:20%;height:auto">
-            <img src="https://www.vitacost.com/blog/wp-content/uploads/2017/08/College-Life-How-to-Eat-Healthy-with-Food-Allergies-at-School-e1502288574935.jpg" style="width:20%;height:auto">
+            <img src="https://www.vitacost.com/blog/wp-content/uploads/2017/08/College-Life-How-to-Eat-Healthy-with-Food-Allergies-at-School-e1502288574935.jpg" style="width:300px;height:auto">
         </div>
     </div>
     </section>
 
     <section class="course">
-        <h1> About Us</h1>
-        <p>This is where I can add any description I want to 
-            for example: the reason for this website</p>
-        <div class="row">
-            <div class="course-col">
-                <h3> Degree</h3>
-                <p> insert whatever</p>
-            </div>
-            <div class="course-col">
-                <h3> Post Grad</h3>
-                <p>Insert whatever</p>
-            </div>
-            <div class="course-col">
-                <h3> adult</h3>
-                <p>almost dead</p>
-            </div>
-        </div>
-    </section>
+        <h1> Our Mission </h1>
+        <p> 
+        The average cost of college per student lies at a whopping $35,000 per year. This is more than half of the national average salary of $53,490. With high demands pushing the inflation up to 10.8% in foods between 4/2021-4/2022, food insecurity is only becoming more prevalent among college students.
+        </p>
 
+        <p>
+        Food insecurity is seen as a range of spectrum in the model below.Food insecurity also is associated with a broad range of psychological difficulties, including depression, stress, and anxiety.
+        </p>
+        <br>
+        <img src="{{url_for('static', filename='foodinsecurity.png')}}" class="center">
+        <div class="row">
+
+            <div class="course-col">
+                <h3> Community </h3>
+                <p> The Kitchen Project focuses on students, but is open for all. The beauty of food drives is the creation of a community. </p>
+            </div>
+
+            <div class="course-col">
+                <h3> Education </h3>
+                <p> How can students focus in school when they must worry about their next meal? </p>
+            </div>
+
+            <div class="course-col">
+                <h3> Health </h3>
+                <p> Despite the pandemic coming to an end, students' mental healths continue to plummet.   </p>
+            </div>    
+        </div>
+
+    </section>
+<!-- 
     <section class="campus">
-        <h1>Our Campus</h1>
-        <p>explaining right below the heading whatever</p>
+        <h1> The Facts </h1>
+        <p> explaining right below the heading whatever </p>
         <div class="row">
             <div class="campus-col">
-                <!-- add image here MAKE SURE TO CHANGE -->
-                <img src="{{url_for('static', filename='vegetable.jpg')}}">
+                
+                <img src="{{url_for('static', filename='cash.jfif')}}">
                 <div class="layer">
-                    <h3> LONDON </h3>
+                    <h3> CASH </h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{{url_for('static', filename='college.jpg')}}">
+                <div class="layer">
+                    <h3> CASH </h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{{url_for('static', filename='cash.jfif')}}">
+                <div class="layer">
+                    <h3> CASH </h3>
                 </div>
             </div>
         </div>
-    </section>    
+    </section>   -->
 
 
     <section class="facilities">
-        <h1> Our Facility </h1>
-        <p> description of everything else here </p>
+        <h1> Statistical Facts </h1>
+        <p> Here are some statistics from very recent surveys related to college students. The AACU revealed in 2018 that 55% of college sudents are financially independent, adding a load of financial stress.
+            </p>
+            <p>Did you know that... </p>
         <div class="row">
+            
             <div class="facilities-col">
-                <img src="{{url_for('static', filename='loop.jpg')}}">
-                <h3> world class library i guess lol </h3>
-                <p> any auruiabksjebgjk seg bsjk</p>
+                <img src="{{url_for('static', filename='cash.jfif')}}">
+                <h3> An average college meal plan costs about $4,500 per year</h3>
+                <p> Estimated to approx. $18.75 per day, a day of food in college costs $7.00 more than the national average in US food cost per day.  </p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="{{url_for('static', filename='collegestudents.jpg')}}">
+                <h3> Currently, 48% of community college students and 41% of 4-year college students report experiencing food insecurity </h3>
+                <p> Higher than expected right? Studies show that nearly 70% of college students feel constantly stressed about their finances. Furthermore, 32% of students reported neglecting their studies at sometime because of the money owed.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="{{url_for('static', filename='zoom.jpg')}}">
+                <h3> Over one-third of students have experienced food insecurity since the COVID pandemic </h3>
+                <p> The pandemic caused a world-wide economic fallout, leaving millions unemployed and prices skyrocketing. Being left with difficulties from inability to pay rents to expenses, many were left with food insecurity problems. </p>
             </div>
         </div>
     </section>
 
+
+
     <section class="testimonials">
-        <h1>Our facilities</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h1> Lasting Effects of Food Insecurity</h1>
+
+        <p> 
+            While studies confirm that food insecurity is linked to lower GPAs and lower academic performance, food-insecure college students are more likely to develop serious mental health issues". 
+            Mild to moderate psychological distress was higher among those who reported to being food insecure, in addition to ~60% of students feeling overwhelmed by schooling. 
+            This leads to an increase in anxiety and depression, lower GPA and academic performance, significantly higher dropout rates and increased debt. 
+        </p> 
+
+
         <div class="row">
+            <div class="testimonial-col">
+                <!-- <img src="{{url_for('static', filename='vegetable.jpg')}}"> -->
+                <!-- <div>
+                    <p> add whatever the hell you want </p>
+                    <h3> name or whatever you want to pop up here</h3>
+                </div>
+            </div>
             <div class="testimonial-col">
                 <img src="{{url_for('static', filename='vegetable.jpg')}}">
                 <div>
                     <p> add whatever the hell you want </p>
                     <h3> name or whatever you want to pop up here</h3>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 
+
+
+
     <section class="cta">
         <h1> Connect with Us! </h1>
+        <p> We will use your location to help you find nearby foodbanks! </p>
         <!-- <a href="contacts" class="hero-btn">CONTACT US</a> -->
         <!-- this saves the name and address to mysql-->
     
         <form action="/" method="post">
             <input type="text" name="Fname" placeholder="Full name"/><br>
-            <input type="text" name="Adress" placeholder="Adress"/><br>
+            <input type="text" name="Adress" placeholder="Address"/><br>
             <input type="submit">
         </form>
     </section>

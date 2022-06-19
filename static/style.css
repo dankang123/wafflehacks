@@ -67,7 +67,6 @@ nav img{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 10em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -97,17 +96,23 @@ nav img{
   padding-bottom: 30px;
 }
 
-.form-group{
-  padding: 14px 30px;
+.form-group input {
+  padding: 14px 20px;
   text-align: left;
+  width: 500px;
 }
 
-.form-control{
+.form-group label {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 17px;
+}
+
+.form-control {
   color: rgb(50, 50, 50);
-  width: 70%;
   box-shadow: 0 0 20px 0 #7f7f7f3d;
 }
-
 
 button {
   background-color: rgba(255, 127, 80);
@@ -116,9 +121,9 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 30%;
+  width: 300px;
+  font-size: 17px;
 }
-
 
 /* any paragraphs in here will be defaulted */
 .text-box p{ 
@@ -188,8 +193,63 @@ nav .fa{
   }
 }
 
+table, th, td {
+  border: 1px solid;
+  border-color: rgb(103, 103, 103);
+}
+
+.table {
+  width: 70%;
+  margin-left:15%; 
+  margin-right:15%;
+  border-collapse: collapse;
+  padding: 10px;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  
+}
+
+th {
+  height: 70px;
+  background-color: rgb(255, 127, 80);
+}
+
+td {
+  text-align: center;
+}
+
+tr:hover{
+  background-color: #ffca7fcf;
+}
+
 /* modification for course */
 
+.map {
+  align-content: center;
+}
+
+iframe {
+  align-content: center;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.cta p{
+  color: #fff;
+}
+.pac-card{
+  
+  align-content: center;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
 .course{
   width: 80%;
   margin: auto;
@@ -432,4 +492,92 @@ testimonials-col{
   margin: 0 13px;
   cursor: pointer;
   padding: 18px 0;
+}
+
+
+
+
+
+#map {
+  height: 100%;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  font-family: Roboto;
+  padding: 0;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
 }
