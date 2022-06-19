@@ -31,6 +31,7 @@ foodbank_names = [
 event_names = ("June 5th 2022, 14:00", "June 5th 2022, 16:00", "Vegan", "New York" "Harrison Food Drive", "702 Modale Drive")
 
 
+mycusor = mydb.cursor()
 
     
 
